@@ -16,7 +16,7 @@ ViaCep::Address.new('13035-680')
 
 # um CEP não existente...
 ViaCep::Address.new('123')
-=> ViaCep::AddressNotFound (the API responded with 404)
+=> ViaCep::AddressNotFound (the API responded with HTTP 404)
 
 # especificando um timeout em segundos...
 ViaCep::Address.new('80210130', timeout: 0.2)
