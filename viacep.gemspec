@@ -8,9 +8,7 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
 
   s.require_paths = ['lib']
-  s.files         = (`git ls-files`.split("\n") - `git ls-files samples`.split("\n"))
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = ['lib/viacep.rb', 'lib/service.rb']
 
   s.add_development_dependency 'rspec', '~> 3.7'
   s.add_dependency 'httparty', '~> 0.13.7'
