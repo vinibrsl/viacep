@@ -1,5 +1,6 @@
 require 'httparty'
 require 'timeout'
+require 'exceptions'
 
 module ViaCep
   class Service
@@ -8,7 +9,9 @@ module ViaCep
     def self.fetch(cep, timeout = nil)
       Timeout::timeout(timeout) do
         response = HTTParty.get("#{BASE_URI}/#{cep}/json")
-        if response.success? && !response.parsed_response['erro']
+        if response.code == 404 || response.parsed_response['erro']
+          raise AddressNotFound
+        else
           response.parsed_response
         end
       end
