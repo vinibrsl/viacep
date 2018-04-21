@@ -10,7 +10,7 @@ module ViaCep
       Timeout::timeout(timeout) do
         response = HTTParty.get("#{BASE_URI}/#{cep}/json")
         if response.code == 404 || response.parsed_response['erro']
-          raise AddressNotFound
+          raise AddressNotFound, 'the API responded with HTTP 404'
         else
           response.parsed_response
         end
