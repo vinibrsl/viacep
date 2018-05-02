@@ -11,5 +11,4 @@ Gem::Specification.new do |s|
   s.files         = ['lib/viacep.rb', 'lib/service.rb', 'lib/exceptions.rb']
 
   s.add_development_dependency 'rspec', '~> 3.7'
-  s.add_dependency 'httparty', '~> 0.13.7'
 end
