@@ -5,7 +5,7 @@ module ViaCep
     attr_reader :cep, :address, :neighborhood, :city, :state, :ibge, :gia
 
     def initialize(cep, options = {})
-      cep = cep.delete('^0-9')
+      cep = cep.to_s.delete('^0-9')
 
       response = Service.fetch cep, options[:timeout]
       fill_from response
