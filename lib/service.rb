@@ -1,18 +1,28 @@
-require 'httparty'
+require 'net/http'
+require 'uri'
+require 'json'
 require 'timeout'
 require 'exceptions'
 
 module ViaCep
   class Service
-    BASE_URI = 'https://viacep.com.br/ws'
+    BASE_URL = 'https://viacep.com.br/ws'.freeze
 
-    def self.fetch(cep, timeout = nil)
-      Timeout::timeout(timeout) do
-        response = HTTParty.get("#{BASE_URI}/#{cep}/json")
-        if response.code == 404 || response.parsed_response['erro']
-          raise AddressNotFound, 'the API responded with HTTP 404'
+    def self.fetch(cep, timeout)
+      Timeout.timeout(timeout) do
+        uri = URI("#{BASE_URL}/#{cep}/json")
+        request = Net::HTTP.get_response(uri)
+
+        if request.code == '200'
+          response = JSON.parse(request.body)
+
+          if response["erro"]
+            raise ApiRequestError, "The server responded with HTTP 200 could not process the request"
+          end
+
+          response
         else
-          response.parsed_response
+          raise ApiRequestError, "The server responded with HTTP #{request.code}"
         end
       end
     end

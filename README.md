@@ -16,11 +16,11 @@ ViaCep::Address.new('13035-680')
 
 # um CEP não existente...
 ViaCep::Address.new('123')
-=> ViaCep::AddressNotFound (the API responded with HTTP 404)
+=> exception thrown: ViaCep::ApiRequestError
 
 # especificando um timeout em segundos...
 ViaCep::Address.new('80210130', timeout: 0.2)
-=> Timeout::Error (execution expired)
+=> exception thrown: Timeout::Error (execution expired)
 ```
 
 # Como instalar?
