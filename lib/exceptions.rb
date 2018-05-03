@@ -1,4 +1,4 @@
 module ViaCep
   class Error < StandardError; end
-  class AddressNotFound < Error; end
+  class ApiRequestError < Error; end  
 end
