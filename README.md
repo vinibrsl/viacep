@@ -1,7 +1,18 @@
-# ViaCEP
-Gem responsável por buscar endereços a partir do CEP utilizando a API do ViaCEP com features úteis como timeout.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BRA_orthographic.svg/270px-BRA_orthographic.svg.png" align="right" />
 
-# Como usar?
+# viacep [![GitHub license](https://img.shields.io/github/license/vnbrs/burocracia.cr.svg)](https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE) 
+> Gem responsável por buscar endereços a partir do CEP utilizando a API do ViaCEP com features úteis como timeout.
+
+## Instalação
+
+Instale o viacep pelo [RubyGems](https://rubygems.org/gems/viacep/) facilmente via terminal:
+
+```shell
+gem install viacep
+=> Vai que é tua! 🚀
+```
+
+## Como usar?
 
 ```ruby
 require 'viacep'
@@ -23,9 +34,15 @@ ViaCep::Address.new('80210130', timeout: 0.2)
 => exception thrown: Timeout::Error (execution expired)
 ```
 
-# Como instalar?
-Instale o ViaCEP pelo RubyGems facilmente via terminal:
-```
-gem install viacep
-=> You're good to go! 🚀
-```
+## Contribuindo
+
+1. Faça um fork (https://github.com/vnbrs/viacep/fork)
+2. Crie uma branch (git checkout -b my-new-feature)
+3. Faça um commit  (git commit -am 'Add some feature')
+4. Faça o push (git push origin my-new-feature)
+5. Crie um Pull Request
+6. Valeu! 🤙🏼
+
+## Contribuidores
+
+- [vnbrs](https://github.com/vnbrs) Vinicius Brasil - creator, maintainer
