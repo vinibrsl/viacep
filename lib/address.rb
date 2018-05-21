@@ -4,6 +4,7 @@ module ViaCep
   class Address
     attr_reader :cep, :address, :neighborhood, :city, :state, :ibge, :gia
 
+    # Initializes an instance of Address and fetches the CEP using the external API
     def initialize(cep, options = {})
       cep = cep.to_s.delete('^0-9')
 

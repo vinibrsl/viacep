@@ -11,4 +11,6 @@ Gem::Specification.new do |s|
   s.files         = ['lib/address.rb', 'lib/service.rb', 'lib/exceptions.rb']
 
   s.add_development_dependency 'rspec', '~> 3.7'
+  s.add_development_dependency 'yard', '~> 0.8.7.6'
+  s.add_development_dependency 'redcarpet', '~> 3.4'
 end

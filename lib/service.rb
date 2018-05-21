@@ -8,6 +8,7 @@ module ViaCep
   class Service
     BASE_URL = 'https://viacep.com.br/ws'.freeze
 
+    # Fetches the ViaCEP API to request a CEP
     def self.fetch(cep, timeout)
       Timeout.timeout(timeout) do
         uri = URI("#{BASE_URL}/#{cep}/json")
