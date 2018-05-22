@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'timeout'
-require 'exceptions'
+require_relative 'exceptions'
 
 module ViaCep
   class Service

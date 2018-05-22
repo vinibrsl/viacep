@@ -1,4 +1,4 @@
-require 'service'
+require_relative 'service'
 
 module ViaCep
   class Address

@@ -1,5 +1,3 @@
-require_relative '../lib/viacep/address'
-
 RSpec.describe ViaCep::Address do
   describe '#initialize' do
     context 'when a valid CEP is passed' do
