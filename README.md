@@ -12,6 +12,13 @@ gem install viacep
 => Vai que é tua! 🚀
 ```
 
+ou...
+
+```shell
+bundle add viacep
+=> Gem instalada no Gemfile! 🤓
+```
+
 ## Como usar?
 
 ```ruby
