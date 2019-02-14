@@ -8,10 +8,24 @@ RSpec.describe ViaCep::Address do
       end
     end
 
-    context 'when a invalid CEP is passed' do
-      it 'raises ViaCep::ApiRequestError' do
+    context 'when a invalid length CEP is passed' do
+      it 'raises ArgumentError' do
         expect { ViaCep::Address.new('000000') }.
+          to raise_error(ArgumentError)
+      end
+    end
+
+    context 'when a unexistent CEP is passed' do
+      it 'raises ViaCep::ApiRequestError' do
+        expect { ViaCep::Address.new('00000000') }.
           to raise_error(ViaCep::ApiRequestError)
+      end
+    end
+  
+    context 'when a nil CEP is passed' do
+      it 'raises ArgumentError' do
+        expect { ViaCep::Address.new(nil) }.
+          to raise_error(ArgumentError)
       end
     end
 
