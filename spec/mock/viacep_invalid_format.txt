@@ -1,0 +1,8 @@
+HTTP/1.1 400 Bad Request
+Server: nginx/1.14.0
+Date: Thu, 14 Feb 2019 23:35:24 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+<h3>ViaCEP Bad Request (400)</h3>

@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Server: nginx/1.14.0
+Date: Thu, 14 Feb 2019 23:34:10 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Request-With, X-Requested-By
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 86400
+Cache-Control: max-age=3600
+Cache-Control: public
+
+{
+  "erro": true
+}
