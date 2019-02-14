@@ -1,4 +1,5 @@
 require_relative '../lib/viacep'
+require 'webmock'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -12,4 +13,6 @@ RSpec.configure do |config|
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.order = :random
+
+  WebMock.disable_net_connect!
 end
