@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 RSpec.describe ViaCep::Address do
   describe '#initialize' do
     context 'when a valid CEP is passed' do
@@ -21,7 +23,7 @@ RSpec.describe ViaCep::Address do
           to raise_error(ViaCep::ApiRequestError)
       end
     end
-  
+
     context 'when a nil CEP is passed' do
       it 'raises ArgumentError' do
         expect { ViaCep::Address.new(nil) }.

@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 RSpec.describe ViaCep::Service do
   it 'should have a base URL' do
     expect(ViaCep::Service::BASE_URL).not_to be_empty
