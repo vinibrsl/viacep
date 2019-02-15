@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files | grep -Ev '^(test|doc|examples|.yardoc|.github)'`.split("\n")
 
   s.add_development_dependency 'rspec', '~> 3.7'
+  s.add_development_dependency 'webmock', '~> 3.5.1'
 end
