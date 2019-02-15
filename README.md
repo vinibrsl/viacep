@@ -33,7 +33,7 @@ ViaCep::Address.new('13035-680')
 => #<ViaCep::Address:0x00007fe52a99e730 @cep="13035-680", @address="Avenida João Jorge", @neighborhood="Vila Industrial", @city="Campinas", @state="SP", @ibge="3509502", @gia="2446">
 
 # um CEP não existente...
-ViaCep::Address.new('123')
+ViaCep::Address.new('12345678')
 => exception thrown: ViaCep::ApiRequestError
 
 # especificando um timeout em segundos...
