@@ -1,7 +1,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BRA_orthographic.svg/270px-BRA_orthographic.svg.png" align="right" />
 
 # viacep [![GitHub license](https://img.shields.io/github/license/vnbrs/burocracia.cr.svg)](https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE) 
-> Dependency-less zipcode lookup gem for Brazilian addresses with a great DSL and useful features such as timeout.
+> Dependency-less zipcode lookup gem for Brazilian addresses with an easy-to-use API and useful features such as timeout.
 
 ## Installing
 
