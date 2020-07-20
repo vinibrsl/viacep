@@ -7,13 +7,13 @@ Gem::Specification.new do |s|
   s.summary       = 'Gem sem dependências e fácil de usar para busca de endereços a partir do CEP utilizando o ViaCEP'
   s.description   = 'Gem sem dependências e fácil de usar para busca de endereços a partir do CEP utilizando o ViaCEP'
   s.authors       = ['Vinicius Brasil (@vnbrs)']
-  s.email         = 'marcosbrasilaraujo@gmail.com'
+  s.email         = 'vini@hey.com'
   s.license       = 'MIT'
   s.homepage      = 'https://github.com/vnbrs/viacep'
 
   s.require_paths = ['lib']
   s.files         = `git ls-files | grep -Ev '^(test|doc|examples|.yardoc|.github)'`.split("\n")
 
-  s.add_development_dependency 'rspec', '~> 3.7'
+  s.add_development_dependency 'rspec',   '~> 3.7'
   s.add_development_dependency 'webmock', '~> 3.8.3'
 end
