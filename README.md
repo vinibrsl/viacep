@@ -1,6 +1,6 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/BRA_orthographic.svg/270px-BRA_orthographic.svg.png" align="right" />
 
-# viacep ![Tests](https://github.com/vnbrs/viacep/workflows/Tests/badge.svg) [![GitHub license](https://img.shields.io/github/license/vnbrs/burocracia.cr.svg)](https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE) 
+# viacep ![Tests](https://github.com/vnbrs/viacep/workflows/Tests/badge.svg) [![GitHub license](https://img.shields.io/github/license/vnbrs/burocracia.cr.svg)](https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE)
 > Dependency-less zipcode lookup gem for Brazilian addresses with an easy-to-use API and useful features such as timeout.
 
 ## Installing
@@ -39,6 +39,9 @@ ViaCep::Address.new('12345678')
 ViaCep::Address.new('80210130', timeout: 0.2)
 => exception thrown: Timeout::Error (execution expired)
 ```
+
+## Docs
+The documentation is available on [RubyDoc](https://www.rubydoc.info/gems/viacep). Starting on [`ViaCep::Address`](https://www.rubydoc.info/gems/viacep/ViaCep/Address) might be a good start.
 
 ## Contributing
 
